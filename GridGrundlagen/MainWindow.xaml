@@ -20,5 +20,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+
+        <Image Source="LernMomentIcon.png" Grid.Column="0" Grid.Row="0"/>
     </Grid>
 </Window>
