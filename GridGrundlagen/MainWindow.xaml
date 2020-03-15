@@ -12,7 +12,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -28,7 +28,10 @@
         
         <!--Zeile 1-->
         <Label Content="Öffne:" Grid.Row="1" Grid.Column="0"/>
-        <TextBox x:Name="youtubeUrlTextBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4"/>
-        
+        <TextBox x:Name="youtubeUrlTextBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <Button x:Name="okButton" Content="Ok" Grid.Row="1" Grid.Column="4"/>
+
+        <!--Zeile 3-->
+        <Button x:Name="browseButton" Content="Browse ..." Grid.Row="3" Grid.Column="4"/>
     </Grid>
 </Window>
