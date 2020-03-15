@@ -24,14 +24,17 @@
         <!--Zeile 0-->
         <Image Source="LernMomentIcon.png" Grid.Column="0" Grid.Row="0"/>
         <TextBlock Text="Spielt YouTube Videos direkt in der Anwendung ab. Gib einfach die YouTube-URL ein und drücke 'Enter' oder klicke 'Ok'." 
-                   TextWrapping="Wrap" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="0"/>
+                   TextWrapping="Wrap" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="0" 
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
         
         <!--Zeile 1-->
         <Label Content="Öffne:" Grid.Row="1" Grid.Column="0"/>
         <TextBox x:Name="youtubeUrlTextBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
-        <Button x:Name="okButton" Content="Ok" Grid.Row="1" Grid.Column="4"/>
+        <Button x:Name="okButton" Content="Ok" 
+                Grid.Row="1" Grid.Column="4" Margin="2,2,2,2"/>
 
         <!--Zeile 3-->
-        <Button x:Name="browseButton" Content="Browse ..." Grid.Row="3" Grid.Column="4"/>
+        <Button x:Name="browseButton" Content="Browse ..." 
+                Grid.Row="3" Grid.Column="4" Margin="5,5,5,5"/>
     </Grid>
 </Window>
