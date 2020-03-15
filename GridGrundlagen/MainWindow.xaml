@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GridGrundlagen"
         mc:Ignorable="d"
         Title="Grundlagen des Grid-Panels" Height="200" Width="425">
-    <Grid>
+    <Grid x:Name="einGrid" Background="Gainsboro" ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
