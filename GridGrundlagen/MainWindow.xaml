@@ -22,5 +22,7 @@
         </Grid.RowDefinitions>
 
         <Image Source="LernMomentIcon.png" Grid.Column="0" Grid.Row="0"/>
+        <TextBlock Text="Spielt YouTube Videos direkt in der Anwendung ab. Gib einfach die YouTube-URL ein und drücke 'Enter' oder klicke 'Ok'." 
+                   TextWrapping="Wrap" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="0"/>
     </Grid>
 </Window>
