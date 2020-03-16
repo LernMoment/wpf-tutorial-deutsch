@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace GridGrundlagen
 {
@@ -20,9 +21,30 @@ namespace GridGrundlagen
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly DispatcherTimer _blendeHinweisAusTimer = new DispatcherTimer();
+
         public MainWindow()
         {
             InitializeComponent();
+            _blendeHinweisAusTimer.Tick += BlendeHinweisAus;
+        }
+
+        private void BlendeHinweisAus(object sender, EventArgs e)
+        {
+            _blendeHinweisAusTimer.Stop();
+            HinweisLabel.Visibility = Visibility.Hidden;
+        }
+        private void ZeigeHinweis(string hinweis, int ausblendeZeitInSekunden = 0)
+        {
+
+            HinweisLabel.Content = hinweis;
+            HinweisLabel.Visibility = Visibility.Visible;
+
+            if ((ausblendeZeitInSekunden > 0) && (!_blendeHinweisAusTimer.IsEnabled))
+            {
+                _blendeHinweisAusTimer.Interval = TimeSpan.FromSeconds(ausblendeZeitInSekunden);
+                _blendeHinweisAusTimer.Start();
+            }
         }
 
         private void okButton_Click(object sender, RoutedEventArgs e)
@@ -32,7 +54,7 @@ namespace GridGrundlagen
 
             if (url == string.Empty)
             {
-                MessageBox.Show("Bitte gib eine YouTube-URL in die weiße Textbox ein!");
+                ZeigeHinweis("Bitte gib eine YouTube-URL in die weiße Textbox ein!", 5);
             }
             else if (url.Contains("youtu.be"))
             {

@@ -30,14 +30,17 @@
         
         <!--Zeile 1-->
         <Label Content="Öffne:" Grid.Row="1" Grid.Column="0"/>
-        <TextBox x:Name="YoutubeUrlTextBox" VerticalAlignment="Center" 
-                 Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="YoutubeUrlTextBox" VerticalAlignment="Stretch" 
+                 Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" TextAlignment="Center"/>
         <Button x:Name="okButton" Content="Ok" 
                 Grid.Row="1" Grid.Column="4" Margin="2,2,2,2" Click="okButton_Click"/>
 
         <!--Zeeile 2-->
         <cef:ChromiumWebBrowser x:Name="YouTubePlayer" Address="https://www.youtube.com/channel/UC5jCUQ6IPHtQP5r4y9byCqA"
                                 Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="5,5,5,5"/>
+        <Label x:Name="HinweisLabel" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" Content="Hinweis: Ein Ersatz für die MessageBox" 
+               FontSize="35" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"
+               Background="#E5D5F3EB" Visibility="Hidden"/>
         
         <!--Zeile 3-->
         <Button x:Name="browseButton" Content="Browse ..." 
