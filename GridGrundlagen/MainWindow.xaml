@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cef="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         xmlns:local="clr-namespace:GridGrundlagen"
         mc:Ignorable="d"
         Title="Grundlagen des Grid-Panels" Height="200" Width="425">
@@ -33,6 +34,10 @@
         <Button x:Name="okButton" Content="Ok" 
                 Grid.Row="1" Grid.Column="4" Margin="2,2,2,2"/>
 
+        <!--Zeeile 2-->
+        <cef:ChromiumWebBrowser x:Name="YouTubePlayer" Address="https://www.youtube.com/channel/UC5jCUQ6IPHtQP5r4y9byCqA"
+                                Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
+        
         <!--Zeile 3-->
         <Button x:Name="browseButton" Content="Browse ..." 
                 Grid.Row="3" Grid.Column="4" Margin="5,5,5,5"/>
