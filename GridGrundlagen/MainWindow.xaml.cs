@@ -24,5 +24,29 @@ namespace GridGrundlagen
         {
             InitializeComponent();
         }
+
+        private void okButton_Click(object sender, RoutedEventArgs e)
+        {
+            string url = YoutubeUrlTextBox.Text;
+            string videoId = "ugji-_yWoRk"; //falls keine andere videoId gefunden werden kann
+
+            if (url == string.Empty)
+            {
+                MessageBox.Show("Bitte gib eine YouTube-URL in die weiße Textbox ein!");
+            }
+            else if (url.Contains("youtu.be"))
+            {
+                string[] elements = url.Split('/');
+                videoId = elements.Last();
+            }
+            else if (url.Contains("youtube.com"))
+            {
+                int startIndex = url.IndexOf("v=") + 2;
+                int endIndex = url.IndexOf("&");
+                videoId = url.Substring(startIndex, endIndex - startIndex);
+            }
+
+            YouTubePlayer.Address = $"https://www.youtube.com/embed/{videoId}?start=68&fs=1";
+        }
     }
 }

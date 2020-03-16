@@ -30,9 +30,9 @@
         
         <!--Zeile 1-->
         <Label Content="Öffne:" Grid.Row="1" Grid.Column="0"/>
-        <TextBox x:Name="youtubeUrlTextBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="YoutubeUrlTextBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
         <Button x:Name="okButton" Content="Ok" 
-                Grid.Row="1" Grid.Column="4" Margin="2,2,2,2"/>
+                Grid.Row="1" Grid.Column="4" Margin="2,2,2,2" Click="okButton_Click"/>
 
         <!--Zeeile 2-->
         <cef:ChromiumWebBrowser x:Name="YouTubePlayer" Address="https://www.youtube.com/channel/UC5jCUQ6IPHtQP5r4y9byCqA"
