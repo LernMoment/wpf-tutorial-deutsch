@@ -6,7 +6,7 @@
         xmlns:cef="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         xmlns:local="clr-namespace:GridGrundlagen"
         mc:Ignorable="d"
-        Title="Grundlagen des Grid-Panels" Height="200" Width="425">
+        Title="Grundlagen des Grid-Panels" Height="600" Width="800">
     <Grid x:Name="einGrid" Background="Gainsboro" ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -36,7 +36,7 @@
 
         <!--Zeeile 2-->
         <cef:ChromiumWebBrowser x:Name="YouTubePlayer" Address="https://www.youtube.com/channel/UC5jCUQ6IPHtQP5r4y9byCqA"
-                                Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
+                                Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="5,5,5,5"/>
         
         <!--Zeile 3-->
         <Button x:Name="browseButton" Content="Browse ..." 
