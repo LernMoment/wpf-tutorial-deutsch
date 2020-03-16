@@ -6,7 +6,7 @@
         xmlns:cef="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         xmlns:local="clr-namespace:GridGrundlagen"
         mc:Ignorable="d"
-        Title="Grundlagen des Grid-Panels" Height="600" Width="800">
+        Title="Grundlagen des Grid-Panels" Height="600" Width="900">
     <Grid x:Name="einGrid" Background="Gainsboro" ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -30,7 +30,8 @@
         
         <!--Zeile 1-->
         <Label Content="Öffne:" Grid.Row="1" Grid.Column="0"/>
-        <TextBox x:Name="YoutubeUrlTextBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="YoutubeUrlTextBox" VerticalAlignment="Center" 
+                 Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
         <Button x:Name="okButton" Content="Ok" 
                 Grid.Row="1" Grid.Column="4" Margin="2,2,2,2" Click="okButton_Click"/>
 
