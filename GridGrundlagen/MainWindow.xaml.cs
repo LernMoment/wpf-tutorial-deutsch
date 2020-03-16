@@ -70,5 +70,10 @@ namespace GridGrundlagen
 
             YouTubePlayer.Address = $"https://www.youtube.com/embed/{videoId}?start=68&fs=1";
         }
+
+        private void browseButton_Click(object sender, RoutedEventArgs e)
+        {
+            ZeigeHinweis("Dieser Button hat noch keine Funktion!", 5);
+        }
     }
 }
